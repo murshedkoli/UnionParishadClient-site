@@ -1,0 +1,21 @@
+.table {}
+
+.table .status {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.table .complate {
+    color: green;
+    background-color: rgb(165, 230, 165);
+}
+
+.table .process {
+    color: rgb(219, 189, 14);
+    background-color: rgb(208, 224, 163);
+}
+
+.table .cancel {
+    color: red;
+    background-color: rgb(230, 149, 149);
+}

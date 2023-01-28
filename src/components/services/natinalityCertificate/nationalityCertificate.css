@@ -1,0 +1,8 @@
+.nationalityCertificate {
+    display: flex;
+    width: 100%;
+}
+
+.nationalityContainer {
+    flex: 6;
+}

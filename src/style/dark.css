@@ -1,0 +1,77 @@
+.App.dark {
+    background-color: #222;
+
+
+
+}
+
+
+.App.dark .chartGrid {
+    stroke: rgba(228, 228, 228, 0.219);
+}
+
+
+.App.dark .table {
+    background-color: #222;
+    color: gray;
+}
+
+.App.dark .table .tableCell {
+    color: gray;
+}
+
+
+.App.dark .navbar {
+    color: #999;
+    border-color: #333;
+}
+
+.App.dark .navbar .search {
+    border-color: gray;
+}
+
+.App.dark .sidebar {
+    background-color: #222;
+    border-color: #333;
+}
+
+.App.dark .sidebar .top .logo {
+    color: #999;
+}
+
+.App.dark .sidebar .top .hr {
+    border-color: #333;
+}
+
+.App.dark .sidebar .top ul li:hover {
+    background-color: #333;
+}
+
+.App.dark .sidebar .top ul li .icon {
+    color: #999;
+}
+
+.App.dark .datatable .dataGrid {
+    color: gray;
+    border: none;
+}
+
+
+.App.dark .datatable .dataGrid .viewButton {
+    color: gray;
+    border: none;
+}
+
+.App.dark input,
+.App.dark select {
+    background-color: transparent;
+}
+
+.App.dark .list .citizenTable {
+    background-color: #222;
+    color: gray;
+}
+
+.App.dark .list .citizenTable .tableCell {
+    color: gray;
+}

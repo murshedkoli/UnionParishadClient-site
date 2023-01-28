@@ -1,0 +1,37 @@
+.tradeLicense {
+    display: flex;
+    width: 100%;
+}
+
+.tradeContainer {
+    flex: 6;
+}
+
+.tradeLicenseContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.tradeLicenseContainer form {
+    width: 60%;
+}
+
+
+.tradeLicenseContainer form .inputBox {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.183);
+    border-left: 1px solid rgba(0, 0, 0, 0.278);
+    color: gray;
+}
+
+
+.tradeLicenseContainer form label {
+    color: gray;
+    font-size: 12px;
+}

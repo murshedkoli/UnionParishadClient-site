@@ -1,0 +1,92 @@
+.datatable .cellImagephoto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.viewButton {
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: darkblue;
+    border: 1px dotted darkblue;
+    cursor: pointer;
+}
+
+.datatable .dataTableTitle {
+    width: 90%;
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.datatable .dataTableTitle .link {
+    text-decoration: none;
+    color: green;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid green;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.datatable .citizenTable .tableCell {
+    color: gray;
+}
+
+.datatable .citizenTable .tableCell img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.pagination {
+    margin: 30px;
+}
+
+.pagination .pageNumberBtn {
+    margin-right: 20px;
+    padding: 5px 10px;
+    border: none;
+}
+
+.pagination .selected {
+    background-color: green;
+    color: whitesmoke;
+}
+
+
+.datatable .search .searchBtn {
+    width: 10%;
+}
+
+.datatable .searchBox {
+    display: flex;
+    margin: 0 60px;
+}
+
+.datatable .searchBox .searchInput {
+    width: 80%;
+    margin: 0 20px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.datatable .searchBox .sIcon {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.datatable .searchBox .sIcon:hover {
+    background-color: rgb(102, 102, 227);
+    color: white;
+
+}

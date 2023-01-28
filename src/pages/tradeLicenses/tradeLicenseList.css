@@ -1,0 +1,13 @@
+.tradeLicensList {
+    display: flex;
+    width: 100%;
+}
+
+.tradeLicensList .tradeListContainer {
+    flex: 6;
+}
+
+.tradeLicensList .tradeListContainer .theListofTrade {
+    margin: 20px;
+    padding: 10px;
+}
