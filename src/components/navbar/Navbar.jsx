@@ -4,12 +4,26 @@ import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { DarkModeContext } from '../context/darkModeContext';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { host } from '../../host';
 
 const Navbar = () => {
 
+    const [admin, setAdmin] = useState();
     const { dispatch } = useContext(DarkModeContext);
+    const phone = JSON.parse(sessionStorage.getItem('username'))
+
+
+
+    useEffect(() => {
+        const url = `${host}/admin/${phone}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setAdmin(data[0]))
+
+    }, [phone])
 
     return (
         <div className='navbar'>
@@ -35,14 +49,14 @@ const Navbar = () => {
 
 
                     <div className="item">
-                        <MenuOutlinedIcon />
+                        <p>{admin.name}</p>
 
                     </div>
 
                     <div className="item">
                         <img
-                            src="https://murshedkoli-portfolio.web.app/static/media/murshedalmain.20bae363.jpg"
-                            alt="Profile"
+                            src={admin.image}
+                            alt={admin.name}
                             className='avatar' />
                     </div>
                 </div>

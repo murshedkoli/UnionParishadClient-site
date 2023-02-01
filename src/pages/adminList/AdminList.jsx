@@ -4,6 +4,7 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import './adminList.css';
 import { host } from '../../host';
 import AdminTable from '../../components/widget/AdminTable';
+import Navbar from '../../components/navbar/Navbar';
 
 
 
@@ -33,24 +34,25 @@ const AdminList = () => {
     return (
         <div className='adminList'>
             <Sidebar />
+            <div className="newContainer">
+                <Navbar />
+
+                <div className="adminListContainer">
+                    <div className='datatable '>
 
 
-            <div className="adminListContainer">
-                <div className='datatable '>
 
 
 
 
+                        <AdminTable adminList={admin} />
 
 
-                    <AdminTable adminList={admin} />
 
-
+                    </div>
 
                 </div>
-
             </div>
-
         </div>
     );
 };

@@ -3,7 +3,6 @@ import './single.css'
 import Sidebar from '../../components/sidebar/Sidebar';
 import Navbar from '../../components/navbar/Navbar';
 import Chart from '../../components/chart/Chart';
-import List from '../../components/table/Table'
 import { useParams } from 'react-router-dom';
 import Services from '../../components/services/Services';
 import swal from 'sweetalert';

@@ -17,7 +17,6 @@ import Taxreceipt from "./components/services/taxreceipt/Taxreceipt";
 import CharitrikSanad from "./components/services/charitrikSanad/CharitrikSanad";
 import TradeLicense from "./components/services/tradeLicense/TradeLicense";
 import TradeLicenseList from "./pages/tradeLicenses/TradeLicenseList";
-import SingleLicense from "./pages/tradeLicenses/SingleLicense";
 import LicenseSingle from "./pages/tradeLicenses/LicenseSingle";
 
 
