@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './login.css'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { initializeApp } from 'firebase/app';
 import { mainUser } from '../../App';
 import { useNavigate } from 'react-router-dom';
+import { host } from '../../host';
+import swal from 'sweetalert';
 
 
 const firebaseConfig = {
@@ -26,7 +28,6 @@ const Login = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(mainUser);
 
-    console.log(loggedInUser);
 
     document.title = "Admin Login page"
 
@@ -52,7 +53,45 @@ const Login = () => {
         navigate('/');
     }
 
+    const [user, setUser] = useState({
+        phone: "",
+        password: ""
+    })
 
+    const handleInput = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+
+
+
+        setUser({ ...user, [name]: value })
+
+    }
+
+    const loginWithUser = (e) => {
+        fetch(`${host}/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(user)
+        }).then(res => res.json())
+            .then(data => {
+                if (data.result) {
+                    swal("দুঃখিত!", `আপনার দেওয়া ইউজার পাসওয়ার্ড ভূল আছে ।  আবার চেষ্টা করুন `, "warning");
+
+                } else {
+                    swal("ধন্যবাদ!", ` ${data.nameBn} ্ আপনি সফলভাবে লগিন করেছেন`, "success");
+
+                    setLoggedInUser(data.phone)
+                    const sessionAdd = JSON.stringify(data.phone);
+                    sessionStorage.setItem('username', sessionAdd);
+
+                    navigate('/');
+                }
+
+            })
+
+        e.preventDefault()
+    }
 
 
 
@@ -60,7 +99,7 @@ const Login = () => {
 
         <div className='loginPage'>
 
-            {loggedUser == 'murshedkoli@gmail.com' ? <div>Your ar Logged Now with : {loggedUser}
+            {loggedUser === !'' ? <div>Your ar Logged Now with : {loggedUser}
                 <br />
 
                 <button onClick={logged}>Back To Dashboard</button>
@@ -73,16 +112,16 @@ const Login = () => {
                     <form >
 
                         <div className="inputDiv">
-                            <label htmlFor="username">Username</label>
-                            <input onChange={1} type="text" name='username' id='username' placeholder='username' />
+                            <label htmlFor="username">Mobile Number</label>
+                            <input onChange={handleInput} type="text" name='phone' id='phone' placeholder='Mobile Number' />
                         </div>
 
                         <div className="inputDiv">
                             <label htmlFor="password">Password</label>
-                            <input onChange={1} type="password" name='password' id='password' placeholder='passowrd' />
+                            <input onChange={handleInput} type="password" name='password' id='password' placeholder='passowrd' />
                         </div>
 
-                        <button className='loginBtn' onClick={1}> Login</button><br />
+                        <button className='loginBtn' onClick={loginWithUser}> Login</button><br />
 
 
                     </form>
