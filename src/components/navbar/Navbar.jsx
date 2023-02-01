@@ -5,25 +5,25 @@ import LanguageIcon from '@mui/icons-material/Language';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import { DarkModeContext } from '../context/darkModeContext';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { host } from '../../host';
+// import { useState } from 'react';
+// import { useEffect } from 'react';
+// import { host } from '../../host';
 
 const Navbar = () => {
 
-    const [admin, setAdmin] = useState();
+    // const [admin, setAdmin] = useState();
     const { dispatch } = useContext(DarkModeContext);
-    const phone = JSON.parse(sessionStorage.getItem('username'))
+    // const phone = JSON.parse(sessionStorage.getItem('username'))
 
 
 
-    useEffect(() => {
-        const url = `${host}/admin/${phone}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setAdmin(data[0]))
+    // useEffect(() => {
+    //     const url = `${host}/admin/${phone}`;
+    //     fetch(url)
+    //         .then(res => res.json())
+    //         .then(data => setAdmin(data[0]))
 
-    }, [phone])
+    // }, [phone])
 
     return (
         <div className='navbar'>
@@ -49,14 +49,14 @@ const Navbar = () => {
 
 
                     <div className="item">
-                        <p>{admin.name}</p>
+                        <p>Name Here</p>
 
                     </div>
 
                     <div className="item">
                         <img
-                            src={admin.image}
-                            alt={admin.name}
+                            src="#"
+                            alt="name"
                             className='avatar' />
                     </div>
                 </div>

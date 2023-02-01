@@ -6,3 +6,48 @@
 .adminList .adminListContainer {
     flex: 6;
 }
+
+
+.newContainer {
+    flex: 6;
+}
+
+.newContainer .top {
+    box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.28);
+    margin: 20px;
+    padding: 10px;
+
+}
+
+.newContainer .top h1 {
+    color: lightgray;
+    font-size: 20px;
+
+}
+
+.newContainer .bottom {
+    box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.28);
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+
+}
+
+.newContainer .bottom .left {
+    flex: 1;
+}
+
+.newContainer .bottom .left img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.newContainer .bottom .right {
+    flex: 2;
+}
