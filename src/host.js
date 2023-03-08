@@ -1,1 +1,1 @@
-export const host = "https://unionparishadservice-server-site-production.up.railway.app";
+export const host = "http://localhost:4000";

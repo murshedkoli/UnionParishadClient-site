@@ -79,7 +79,7 @@ const Login = () => {
                     swal("দুঃখিত!", `আপনার দেওয়া ইউজার পাসওয়ার্ড ভূল আছে ।  আবার চেষ্টা করুন `, "warning");
 
                 } else {
-                    swal("ধন্যবাদ!", ` ${data.nameBn} ্ আপনি সফলভাবে লগিন করেছেন`, "success");
+                    swal("ধন্যবাদ!", ` ${data.nameBn}  আপনি সফলভাবে লগিন করেছেন`, "success");
 
                     setLoggedInUser(data.phone)
                     const sessionAdd = JSON.stringify(data.phone);

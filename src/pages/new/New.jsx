@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import swal from 'sweetalert';
 import { host } from '../../host';
-import uploader from '../../photo/upload.png'
 
 
 
@@ -17,7 +16,7 @@ const New = () => {
     document.title = `New Citizen Add Page Of Kalikaccha Union Parishad `
 
 
-    const [imageUrl, setImageUrl] = useState(uploader);
+    const [imageUrl, setImageUrl] = useState("");
 
     const [uploadPercentage, setUploadPercentage] = useState(0);
 
@@ -89,7 +88,8 @@ const New = () => {
                         body: JSON.stringify(citizenDataToSubmit)
                     }).then(res => res.json())
                         .then(data => {
-                            if (data.insert === 1) {
+                            console.log(data.affectedRows !== 0);
+                            if (data) {
                                 swal("ধন্যবাদ!", `আপনি ${fullNameBn} কে সফল ভাবে যুক্ত করেছেন`, "success");
 
 
@@ -190,6 +190,7 @@ const New = () => {
         axios.post('https://api.imgbb.com/1/upload', imageData, options)
             .then(response => {
                 setImageUrl(response.data.data.display_url);
+                console.log(response.data.data.display_url)
                 setUploadPercentage(100, () => {
                     setTimeout(() => {
                         setUploadPercentage(0);

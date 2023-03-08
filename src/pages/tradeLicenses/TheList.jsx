@@ -55,7 +55,7 @@ const TheList = ({ tradeLicenses }) => {
                             <TableCell className='tableCell'>{license.tradeLicenseNo}</TableCell>
                             <TableCell className='tableCell'>{license.issuedDate}</TableCell>
                             <TableCell className='tableCell'>{license.financialYear}</TableCell>
-                            <TableCell className='tableCell'><Link to={`licenselist/${license.tradeLicenseNo}`}><button className='viewButton'>View</button></Link></TableCell>
+                            <TableCell className='tableCell'><Link to={`/licenselist/${license.tradeLicenseNo}`}><button className='viewButton'>View</button></Link></TableCell>
 
                         </TableRow>
                     ))}
